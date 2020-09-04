@@ -36,7 +36,9 @@ const PORT = process.env.PORT || 5000;
 
 
 
-
+app.get('/negative', (req, res) => {
+  res.render('user/negative',{msg:"Please enter a valid credit value"});
+});
 
 
 app.get('/success', (req, res) => {
@@ -44,7 +46,7 @@ app.get('/success', (req, res) => {
 });
 
 app.get('/failure', (req, res) => {
-  res.render('user/failure',);
+  res.render('user/failure',{msg:"Please check the amount you have entered,you may not have sufficient balance in account!!"});
 });
 
 app.get('/transactionHistory', (req, res) => {

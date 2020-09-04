@@ -100,14 +100,19 @@ router.post('/transact', function (req, res) {
     console.log(recipient);
   });
   console.log(recipient[0]);
-
+  if( req.body.amount <= 0){
+    res.redirect('/negative');
+  }
+  else{
   User.find(
     {
       _id: payee,
     },
+   
+   
     function (err, user) {
       if (!err) {
-        if (user[0].credits >= req.body.amount) {
+        if (user[0].credits >= req.body.amount ) {
           User.findOneAndUpdate(
             {
               _id: payee,
@@ -159,7 +164,9 @@ router.post('/transact', function (req, res) {
         }
       }
     }
+  
   );
+  }
 });
 
 module.exports = router;
