@@ -4,7 +4,7 @@
   "description": "Task1 for Internship",
   "main": "server.js",
   "scripts": {
-    "start": "node index",
+    "start": "node server",
     "dev": "nodemon index"
   },
   "author": "",
