@@ -60,9 +60,9 @@ router.get('/viewUsers/:id', function (req, res) {
 //Get to the Transfer Page of a Particular User
 router.post('/avatar', function (req, res) {
 
-  const id = req.body.payeeid;
+  const id =  (req.body.payeeid);
   console.log(id);
-  const name = User.findById(ObjectID(id), { fullName: 1, _id: 1 });
+  const name = User.findById((id), { fullName: 1, _id: 1 });
  
 
   //console.log(id)
