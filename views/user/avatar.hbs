@@ -1,0 +1,39 @@
+
+<section class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            <h4>Your Profile</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+
+                <input type="text-muted" class="form-control" disabled="disabled" value="{{avatar.fullName}}">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text-muted" class="form-control" disabled="disabled" value="{{avatar.email}}">
+              </div>
+              <div class="form-group">
+                <label for="Credits">Credits</label>
+                <input type="text-muted" class="form-control" disabled="disabled" value="{{avatar.credits}}">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h3>Your Avatar</h3>
+        <img src="/img/profile.png" alt="" class="d-block img-fluid mb-3 ">
+
+        <a href="/{{avatar.id}}" class="btn btn-warning btn-block">Transfer</a>
+        <input type="hidden" value={{avatar.id}}> 
+        
+      </div>
+    </div>
+  </div>
+</section>

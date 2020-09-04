@@ -1,0 +1,48 @@
+
+
+<section id="users">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header table-responsive">
+            <h3>View Users</h3>
+          </div>
+
+          <table class="table table-striped table-hover table-bordered table-condensed table-responsive-sm">
+          <thead class="thead-dark">
+            <tr>
+            <th>#</th>
+             <th>Full Name</th>
+              <th>Email</th>
+              <th>Mobile No</th>
+              <th>Credits</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each viewUsers}}
+              <tr>
+                <td></td>
+                <td>{{this.fullName}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mobile}}</td>                                
+                <td>{{this.credits}}</td>
+               <td>
+                
+                <a href="/viewUsers/{{this.id}}" class="btn btn-outline-primary btn-block">Select</a>
+                <input type="hidden" value={{this.id}}>
+                
+                </td>
+                                
+              </tr>
+              {{/each}}
+          </tbody>
+        </table>
+        </div>
+        </div>
+        
+
+  </div>
+  </div>
+</section>
