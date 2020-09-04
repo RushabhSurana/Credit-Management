@@ -7,8 +7,11 @@ Youtube Upload:
   https://www.youtube.com/watch?v=t_AJ7kvO8vI
   
 To start using the code:
-    npm init
+
+      npm init
+
 To start the server :  
-    npm run dev
+
+     npm run dev
   
   
